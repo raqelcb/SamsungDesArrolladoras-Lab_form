@@ -1,0 +1,91 @@
+:root{
+  --principal: white;
+  --background-fieldset: yellow;
+  --principal-box: lightblue;
+  --text-box: red;
+  --button: pink;
+  --text-color: blue;
+  --typo : 'Times New Roman', Serif;
+} 
+
+*{  
+  margin:0;
+  padding:0;
+  border:0;
+  box-sizing: border-box;
+} 
+
+h1 {
+  margin-top: 40px;
+  text-align: center;
+  font-size: 40px;
+  color: var(--text-color);
+  text-shadow: 2px 2px 2px var(--background-fieldset);
+}
+
+.form {
+  margin: 40px;
+}
+
+.form__title {
+  text-align: left;
+}
+
+fieldset {
+  padding:20px;
+  margin-bottom: 10px;
+  background-color: var(--principal-box);
+  border:none;
+  border-radius: 5px;
+}
+
+fieldset input {
+  margin:2px;
+  background-color: var(--background-fieldset);
+  border: 1px solid grey;
+  border-radius: 3px;
+}
+
+.contratation__type input {
+margin-bottom: 15px;
+}
+
+.form__radio {
+  margin-bottom: 25px;
+}
+
+legend {
+  background-color: var(--text-box);
+  padding: 4px;
+  color: var(--principal);
+  border-radius: 3px;
+}
+
+#valoracion {
+  margin-top: 10px;
+}
+
+#date {
+  background-color: var(--principal);
+  margin-top: 15px;
+}
+
+button {
+  padding: 3px;
+  margin: 2px;
+}
+
+.button {
+  background-color: var(--button);
+  border:none;
+  padding:5px;
+  border-radius: 5px;
+  width: 100px;
+}
+
+#validacion {
+  display: inline-block;
+  margin-left: 90px;
+  font-size: medium;
+  font-family:var(--typo);
+} 

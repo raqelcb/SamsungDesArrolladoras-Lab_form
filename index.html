@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario Alta Telefónica</title>
+    <link rel="stylesheet" href="css/index.css" />
+    <script src="js/index.js" defer type="text/javascript"></script>
+</head>
+<body>
+    <h1 class="title">Formulario Información Alta Telefónica</h1> 
+    <div class="form">
+        <form method="POST" action="./procesarFormulario.php" >
+        <form action="#" name="telefonica">
+           <fieldset class="form__box">
+               <legend class="form__title">Datos personales</legend>
+               <label for="name">Nombre:</label>
+               <input 
+               type="text" 
+               name="nombre"
+               placeholder="Introduzca su nombre" 
+               id="name" 
+               maxlength="30">
+               <br>
+               <label for="surname">Apellidos:</label>
+               <input 
+               type="text" 
+               name="apellidos"
+               placeholder="Introduzca su apellido" 
+               id="surname" 
+               maxlength="60">
+               <br>
+               <label for="address">Dirección:</label>
+               <input t
+               ype="text" 
+               name="address" 
+               id="address" 
+               maxlength="60"
+               required="required"
+               pattern="[0-9]{3,60}">
+               <br>
+               <label for="postcode">Código Postal:</label>
+               <input 
+               type="text" 
+               name="postcode" 
+               id="postcode" 
+               minlength="5" 
+               maxlength="5">
+               <div id="validacion"></div>
+               <br>
+               <label for="location">Localidad:</label>
+               <input 
+               type="text" 
+               name="provincia"
+               id="provincia"
+               required="required"
+               pattern="[a-zA-Z]{5,60}">
+           </fieldset>
+           <fieldset class="form__box">
+               <legend class="form__title">Tipo de Contratación</legend>
+               <input 
+               type="radio" 
+               name="contratacion" 
+               id="nuevo" 
+               class="form__radio" 
+               checked> 
+               <label for="nuevo">Nueva Contratación</label> 
+               <input 
+               type="radio" 
+               name="contratacion" 
+               id="portabilidad" 
+               class="form__radio"> 
+               <label for="portabilidad">Portabilidad</label> 
+               <input 
+               type="radio" 
+               name="contratacion" 
+               id="cambio" 
+               class="form__radio">
+               <label for="cambio-contrato">Cambio de Contrato</label>
+               <br>
+               <label for="actual-company">Elija la compañía actual:</label>
+               <select name="compañia-actual" id="actual-company">
+                   <option value="movistar">Movistar</option>
+                   <option value="orange">Orange</option>
+                   <option value="vodafone">Vodafone</option>
+                   <option value="yoigo">Yoigo</option>
+                   <option value="no-compañia">No Tengo Ninguna Compañía</option>
+               </select>
+               <label for="change-company">En caso de portabilidad, elija la nueva compañía:</label> 
+               <select name="cambio-compañia" id="change-company">
+                   <option value="movistar-p">Movistar</option>
+                   <option value="orange-p">Orange</option>
+                   <option value="vodafone-p">Vodafone</option>
+                   <option value="yoigo-p">Yoigo</option>
+               </select>
+           </fieldset>
+           <fieldset class="form__box">
+               <legend class="form__title">Datos Bancarios</legend>
+               <label for="country">País:</label>
+               <input 
+               type="text" 
+               name="cuenta" 
+               id="pais" 
+               value="ES" 
+               readonly>(sólo válido ES) 
+               <br>
+               <label for="iban">Control IBAN:</label>
+               <input 
+               type="text" 
+               name="cuenta" 
+               id="iban" 
+               placeholder="XX" 
+               minlength="2" 
+               maxlength="2">(dos dígitos)
+               <br>
+               <label for="entidad">Entidad:</label>
+               <input 
+               type="text" 
+               name="cuenta" 
+               id="entidad" 
+               placeholder="XXXX" 
+               maxlength="4">(cuatro dígitos) 
+               <br>
+               <label for="sucursal">Sucursal:</label>
+               <input 
+               type="text" 
+               name="cuenta" 
+               id="sucursal" 
+               placeholder="XXXX" 
+               maxlength="4">(cuatro dígitos) 
+               <br>
+               <label for="dc">DC:</label>
+               <input 
+               type="text" 
+               name="cuenta" 
+               id="dc" 
+               placeholder="XX" 
+               maxlength="2">(dos dígitos) 
+               <br>
+               <label for="account">Cuenta:</label>
+               <input 
+               type="text" 
+               name="cuenta" 
+               id="cuenta" 
+               placeholder="XXXXXXXXXX" 
+               maxlength="10">(diez dígitos)
+           </fieldset>
+           <fieldset class="form__box">
+               <legend class="form__title">Datos estadísticos - ¿Cómo nos conoció?</legend>
+               <input 
+               type="checkbox" 
+               name="estadistica" 
+               id="tv"> 
+               <label for="tv">A través de la TV</label> 
+               <br>
+               <input 
+               type="checkbox" 
+               name="estadistica" 
+               id="radio"> 
+               <label for="radio">A través de la radio</label> 
+               <br>
+               <input 
+               type="checkbox" 
+               name="estadistica" 
+               id="internet"> 
+               <label for="internet"> A través de la Internet</label> 
+               <br>
+               <input 
+               type="checkbox" 
+               name="estadistica" 
+               id="otros"> 
+               <label for="otros">Otros</label> 
+               <br>
+               <input 
+               type="range" 
+               name="valoracion" 
+               id="valoracion" 
+               value="3"
+               min="1" 
+               max="5"> 
+               <label for="valoracion">Valoración [1-5]</label> 
+               <br>
+               <label for="date">Fecha de la encuesta:</label>
+               <input 
+               type="date" 
+               name="fecha" 
+               id="fecha" 
+               value="2019-01-01">
+           </fieldset>  
+
+           <input 
+           type="button" 
+           value="Enviar Datos" 
+           onclick="validarCodigo(); validarProvinciaPostal();"/>
+           <input 
+           type="reset" 
+           value="Borrar Datos"/>
+           <!-- <button type="submit">Enviar Datos</button>
+           <button type="reset">Borrar Datos</button>  -->
+
+           <br>
+           <button 
+           type="button" 
+           class="button" 
+           onclick="mostrarValoracion();">Mostrar Valoración</button>
+           <button 
+           type="button" 
+           class="button" 
+           onclick="mostrarCuenta();">Mostrar Cuenta</button>
+           <button 
+           type="button" 
+           class="button" 
+           onclick="mostrarDia();">Mostrar Día Semana</button>
+       </form>
+   </div>
+</body>
+</html>            
